@@ -1,5 +1,7 @@
 ## Network policy example
 
+See the dedicated guide: [networkpolicy.md](networkpolicy.md) for patterns, semantics and debugging.
+
 ### default policy (ingress allow; egress restricted)
 
 apiVersion: networking.k8s.io/v1
