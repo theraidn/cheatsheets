@@ -16,6 +16,9 @@ NGINX common annotations
 - `nginx.ingress.kubernetes.io/proxy-body-size: 50m`
 - `nginx.ingress.kubernetes.io/use-regex: "true"`
 
+cert-manager common annotations
+- 'cert-manager.io/duration: "1h"'
+
 Cert-manager (ACME) — ClusterIssuer example
 ```yaml
 apiVersion: cert-manager.io/v1
