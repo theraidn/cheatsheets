@@ -15,7 +15,7 @@ auth    optional    pam_fscrypt.so
 session optional    pam_fscrypt.so
 ```
 
-### Example fscrypt.conf with Adiantum:
+### Example fscrypt.conf with Adiantum (for CPUs without native AES Accelerator):
 ```bash
 root@NAS:~# cat /etc/fscrypt.conf 
 {
