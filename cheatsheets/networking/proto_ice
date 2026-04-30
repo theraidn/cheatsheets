@@ -1,0 +1,40 @@
+# UDP ICE (Interactive Connectivity Establishment)
+
+UDP ICE (Interactive Connectivity Establishment) is a protocol used in VoIP and real-time communication applications to establish and maintain network connections between peers, particularly in NAT (Network Address Translation) environments.
+
+## How ICE Works
+
+ICE operates through a systematic process of candidate collection and connectivity checking:
+
+### Candidate Collection Methods
+1. **Host candidates** - Direct IP addresses of the local network interface
+2. **Srflx candidates** - Addresses discovered via STUN (Session Traversal Utilities for NAT)
+3. **Relay candidates** - Addresses provided by TURN (Traversal Using Relays around NAT) servers
+
+### Process Flow
+1. Each peer gathers candidates using STUN/TURN servers
+2. Candidates are exchanged between peers via signaling (typically SIP or WebRTC signaling)
+3. A connectivity check is performed using the "connectivity check" mechanism
+4. The best candidate pair is selected based on connectivity and performance metrics
+
+## Key Benefits
+
+- **NAT Traversal**: Enables connections without requiring manual port mapping
+- **Automatic Fallback**: Automatically falls back to relay candidates when direct connections fail
+- **Dual Stack Support**: Works with both IPv4 and IPv6
+- **Protocol Integration**: Seamlessly integrates with STUN and TURN protocols for comprehensive NAT traversal
+
+## Common Applications
+
+ICE is essential for:
+- **WebRTC applications** - Establishing real-time audio/video streams
+- **SIP-based VoIP systems** - Reliable voice communication between endpoints
+- **Other real-time communication protocols** - Any application requiring peer-to-peer connectivity through NATs
+
+## Architecture Notes
+
+ICE is not a standalone protocol but rather a **framework** that integrates with:
+- **STUN protocols** for host address discovery
+- **TURN protocols** for relay services when direct connections aren't possible
+
+This integration provides comprehensive NAT traversal capabilities essential for modern real-time communication systems.
